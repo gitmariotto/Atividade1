@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Minha Loja Digital</h1>
+    </header>
+
+  <section class="itens">
+        <h2>Meu Carrinho</h2>
+        <p>Revise os itens antes de concluir sua compra</p>
+    </section>
+
+    <main>
+        <article class="produto">
+            <img src="https://i.pinimg.com/736x/65/40/b4/6540b4d1a573ffb37a43518f01b7b0ef.jpg" alt="Tênis" class="produto-img">
+
+            <h2>Tênis Tech SENAI</h2>
+            <p>Preço original: R$ <span id="preco-base">200</span></p>
+            <p>Desconto de 10% aplicado</p>
+            <hr>
+            <h3>Total com desconto: R$ <span id="preco-final">0</span></h3>
+            <h3>Total com frete: R$ <span id="preco-com-frete">0</span></h3>
+        </article>    
+
+        <section class="envio">
+            <h2>Detalhes do envio</h2>
+            <p>Prazo de entrega: de 5 a 7 dias úteis</p>
+            <p>Valor do frete: R$ 23,00</p>
+        </section>
+    </main>
+
+    <script>
+        const precoBase = 200;
+        const desconto = 0.10;
+        const frete = 23;
+ 
+        const valorDesconto = precoBase * desconto;
+        const precoFinal = precoBase - valorDesconto;
+        const precoComFrete = precoFinal + frete;
+
+        document.getElementById('preco-final').innerText = precoFinal;
+        document.getElementById('preco-com-frete').innerText = precoComFrete;
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
